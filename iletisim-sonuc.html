@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>İletişim Form Kayıt</title>
+  </head>
+  <body>
+    <a href="index.html">Anasayfa</a>
+    <hr />
+    <h1>İletişim Form Kayıt</h1>
+    <p>Formu başarıyla gönderdiniz. Aşağıdaki bilgilerle kayıt oldunuz:</p>
+
+    <script>
+      // Form verilerini almak
+      const urlParams = new URLSearchParams(window.location.search);
+      const ad = urlParams.get("ad");
+      const email = urlParams.get("email");
+      const mesaj = urlParams.get("mesaj");
+
+      // Verileri sayfada göstermek
+      document.write("Ad: " + ad + "<br>");
+      document.write("E-posta: " + email + "<br>");
+      document.write("Mesaj: " + mesaj + "<br>");
+    </script>
+
+    <p>Teşekkür ederiz! Size en kısa sürede geri dönüş yapacağız.</p>
+    <a href="iletisim.html">Geri Dön</a>
+    <footer>
+      <hr />
+      <p>
+        Tüm hakları saklıdır. copyright &copy; 2025 MovieApp &trade; | Gizlilik
+        Politikamıza ulaşmak için <a href="gizlilik.html"> tıklayınız</a>
+        <br />
+        <a href="yardım.html">Yardım</a> | <a href="iletisim.html">İletişim</a> |
+        <a href="hakkimizda.html">Hakkımızda</a>
+      </p>
+    </footer>
+  </body>
+</html>
