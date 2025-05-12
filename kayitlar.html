@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Üye Bilgileri</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="resp.css" />
+    <script src="scrollup.js" defer></script>
+    <script src="kayitlar.js" defer></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atomic+Age&family=Bokor&family=Cinzel+Decorative:wght@400;700;900&family=Fascinate+Inline&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ledger&family=Limelight&family=Metamorphous&family=Monoton&family=Noto+Serif+Georgian:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/ylh2ujn.css" />
+    <link
+      rel="shortcut icon"
+      href="images/movieApp-favico.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="links">Anasayfa</a>
+        <a href="en-iyi-filmler.html" class="links">En iyi filmler</a>
+        <a href="kayit-ol.html" class="links">Kayıt Ol</a>
+
+        <div class="logo-container">
+          <img src="images/film-roll.ico" alt="MovieApp Logo" />
+          <a href="index.html" id="logo"><h1>MovieApp</h1></a>
+        </div>
+      </nav>
+    </header>
+    <center>
+      <h1>Üye Bilgileriniz</h1>
+    </center>
+
+    <div id="kayitlar-div">
+      <h2>Hesap Bilgileriniz:</h2>
+      <table id="hesapBilgileri">
+        <tr>
+          <td><strong>Kullanıcı Adı:</strong></td>
+          <td id="username"></td>
+        </tr>
+        <tr>
+          <td><strong>E-posta:</strong></td>
+          <td id="eposta"></td>
+        </tr>
+        <tr>
+          <td><strong>Parola:</strong></td>
+          <td id="parola"></td>
+        </tr>
+      </table>
+
+      <h2>Kişisel Bilgileriniz:</h2>
+      <table id="hesapBilgileri">
+        <tr>
+          <td><strong>Ad:</strong></td>
+          <td id="ad"></td>
+        </tr>
+        <tr>
+          <td><strong>Soyad:</strong></td>
+          <td id="soyad"></td>
+        </tr>
+        <tr>
+          <td><strong>Doğum Tarihi:</strong></td>
+          <td id="birthdate"></td>
+        </tr>
+        <tr>
+          <td><strong>Şehir:</strong></td>
+          <td id="sehir"></td>
+        </tr>
+        <tr>
+          <td><strong>Cinsiyet:</strong></td>
+          <td id="cinsiyet"></td>
+        </tr>
+        <tr>
+          <td><strong>Hobiler:</strong></td>
+          <td id="hobiler"></td>
+        </tr>
+      </table>
+
+      <h2>Özet:</h2>
+      <p>Tebrikler! Kayıt işleminiz başarılı bir şekilde tamamlandı.</p>
+      <div class="button-container">
+        <a href="kayit-ol.html" class="links">Geri Dön</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Tüm hakları saklıdır. copyright &copy; 2025 MovieApp &trade; | Gizlilik
+        Politikamıza ulaşmak için <a href="gizlilik.html">tıklayınız</a>
+        <br />
+        <a href="yardım.html">Yardım</a> |
+        <a href="iletisim.html">İletişim</a> |
+        <a href="hakkimizda.html">Hakkımızda</a>
+      </p>
+    </footer>
+    <script>
+      // ...existing code...
+document.getElementById("sehir").textContent = getQueryParam("sehir");
+// ...existing code...
+    </script>s
+    <button id="scrollTopBtn" title="yukarı kaydır">⬆</button>
+    <script src="scrollup.js"></script>
+    <script src="kayitlar.js"></script>
+  </body>
+</html>

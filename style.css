@@ -1,0 +1,866 @@
+/* Genel HTML ayarları */
+html {
+  height: 100%;
+}
+
+/* Sayfa arka planı ve temel body ayarları */
+body {
+  background: linear-gradient(165deg, #ffb22c 0%, #fa812f 100%);
+  background-attachment: fixed;
+  background-color: #f5b82e;
+  font-weight: 400;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Paragraflar için font ayarı */
+p {
+  font-family: rubik, sans-serif;
+  font-size: 16px;
+}
+
+/* Navigasyon linklerinin görünümü */
+nav .links {
+  font-size: 16px;
+  font-family: "Noto Serif Georgian", serif;
+  font-weight: bold;
+  color: #522546;
+  font-weight: 400;
+}
+
+/* Glow animasyonu (yazı parlatma) */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #f4ac32, 0 0 10px #f4ac32;
+  }
+  to {
+    text-shadow: 0 0 10px #f4ac32, 0 0 20px #f4ac32, 0 0 30px #f4ac32;
+  }
+}
+
+/* Logo için döndürme animasyonu */
+@keyframes logoSpin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Logo görseli ayarları ve animasyonu */
+.logo-container img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.5s ease;
+  animation: logoSpin 20s linear infinite;
+}
+
+/* Logo üzerine gelince animasyonu durdurur */
+.logo-container:hover img {
+  animation-play-state: paused;
+}
+
+/* Tüm linkler için temel görünüm */
+a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+/* Anasayfaya dön butonu */
+#anasayfa-don {
+  background-color: #522546;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* Kayıtlar divi (tablo ve içerik kutusu) */
+#kayitlar-div {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+/* İletişim tablosu */
+#iletisim-table { 
+  font-family: "Noto Serif Georgian", serif;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Anasayfa dön butonu hover efekti */
+#anasayfa-don:hover {
+  background-color: #522546;
+  color: #f4ac32;
+}
+
+/* Yatay çizgi */
+hr {
+  border: 1px solid #522546;
+}
+
+/* Navigasyon çubuğu */
+nav {
+  background-color: #f4ac32;
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #000;
+}
+
+/* Sayfa başlığı ve üst bölüm */
+header {
+  margin-bottom: 40px;
+}
+
+/* Yan menü (aside) */
+aside {
+  width: 260px;
+  background-color: #f4ac32;
+  border-radius: 8px;
+  margin-top: 140px;
+  padding: 0;
+}
+
+/* Yan menüdeki nav */
+aside nav {
+  padding: 20px;
+  height: auto;
+  background-color: transparent;
+  border: none;
+}
+
+/* Yan menüdeki liste */
+aside nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Yan menüdeki liste elemanları */
+aside nav ul li {
+  margin-bottom: 20px;
+}
+
+/* Yan başlık (yan menü başlığı) */
+#yanbaslik {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #000;
+  transition: all 0.2s ease;
+}
+
+/* Alt menü (nested ul) */
+aside nav ul ul {
+  padding-left: 15px;
+}
+
+/* Alt menüdeki liste elemanları */
+aside nav ul ul li {
+  margin: 8px 0;
+  position: center;
+}
+
+/* Alt menüdeki linkler */
+aside nav ul ul a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 8px 10px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+/* Alt menüdeki link hover efekti */
+aside nav ul ul a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-left: 15px;
+}
+
+/* Ana içerik alanı */
+#content {
+  margin-right: 20px;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+/* En iyi filmler paragrafı */
+.en-iyi-filmler-p {
+  font-size: 16px;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Ana başlık */
+h1 {
+  color: #522546;
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Noto Serif Georgian", serif;
+}
+
+/* İletişim formu kutusu */
+#contactForm {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* İletişim formu etiketleri */
+#contactForm label {
+  display: block;
+  font-weight: 600;
+  color: #522546;
+  margin-bottom: 8px;
+  font-family: "Noto Serif Georgian", serif;
+}
+
+/* İletişim formu giriş alanları */
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+/* İletişim formu textarea */
+#contactForm textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* İletişim formu focus efekti */
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #522546;
+  outline: none;
+  box-shadow: 0 0 5px rgba(82, 37, 70, 0.2);
+}
+
+/* İletişim formu gönder butonu */
+#contactForm input[type="submit"] {
+  background-color: #522546;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Gönder butonu hover efekti */
+#contactForm input[type="submit"]:hover {
+  background-color: #f4ac32;
+}
+
+/* İletişim başlığı */
+.contact-title {
+  color: #522546;
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Noto Serif Georgian", serif;
+}
+
+/* Adres kısmındaki kalın yazı */
+#adres strong {
+  color: #522546;
+}
+
+/* Footer (alt bilgi) */
+footer {
+  border-top: #000 1px solid;
+  margin-top: auto;
+  width: 100%;
+  background-color: #f4ac32;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Footer içindeki paragraf */
+footer p {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Logo ve başlık konteyneri */
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo hover efekti */
+.logo-container:hover img {
+  transform: scale(1.1) rotate(360deg);
+  filter: brightness(1.2);
+}
+
+/* Link hover efekti */
+a:hover {
+  color: #522546;
+  text-decoration-color: #522546;
+  transition: all 0.3s ease-in-out;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+/* Adres kutusu */
+#adres {
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  background-color: #f4ac32;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 10px;
+  border-top: 1px solid #2c2c2c;
+  border-left: 1px solid #2c2c2c;
+  max-width: 290px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* En iyi filmler kategorisi listesi */
+.en-iyi-filmler_kategori {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: "›";
+  margin: 0 10px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+/* Kategori listesindeki ok işareti */
+.en-iyi-filmler_kategori li::before {
+  content: "›";
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 5px;
+  color: #2c2c2c;
+  font-weight: 600;
+}
+
+/* Baba filmi için özel stil */
+#baba {
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+}
+
+/* İçerik ve görsel blokları için düzen */
+.inline-container {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+/* Inline bloklar */
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* İçerik bloğu */
+.content-block {
+  margin-left: 20px;
+  font-size: 16px;
+  color: #2c2c2c;
+}
+
+/* Buton konteyneri */
+.button-container {
+  margin: 20px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Butonlar */
+.button-container a {
+  text-decoration: none;
+  color: #2c2c2c;
+  background-color: #f4ac32;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* Buton hover efekti */
+.button-container a:hover {
+  background-color: #522546;
+  color: #f4ac32;
+}
+
+/* SSS kutusu */
+#sss {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+/* Bize ulaşın başlığı */
+#Bize-Ulaşın {
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Menü linkleri */
+.links {
+  display: inline-block;
+  border: #000 1px solid;
+  background-color: #f4ac32;
+  color: #000;
+  padding: 5px 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+/* Menü link hover efekti */
+.links:hover {
+  background-color: #522546;
+  color: #f4ac32;
+}
+
+/* Diğer butonlar */
+.button {
+  color: #2c2c2c;
+  margin-left: 20px;
+}
+
+/* Başlıklar ortalanır */
+h1 {
+  text-align: center;
+}
+
+/* Ana içerik alt boşluk */
+main {
+  margin-bottom: 100px;
+}
+
+/* Kayıt ol sayfası arka planı */
+body[class="kayit-ol.html"] {
+  background-image: image("images/forms-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Kayıtlar divi (responsive ve kutu görünümü) */
+#kayitlar-div {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Kayıtlar tablosu */
+#kayitlar-div table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Kayıtlar tablo hücreleri */
+#kayitlar-div td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+/* Kayıtlar tablo satırı hover efekti */
+#kayitlar-div tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Kayıtlar ilk hücre (başlık) */
+#kayitlar-div td:first-child {
+  font-weight: 600;
+  color: #522546;
+  width: 30%;
+}
+
+/* Kayıtlar son hücre (açıklama) */
+#kayitlar-div td:last-child {
+  color: #2c2c2c;
+}
+
+/* Kayıtlar başlığı */
+#kayitlar-div h2 {
+  color: #522546;
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #f4ac32;
+  padding-bottom: 0.5rem;
+}
+
+/* Kayıtlar paragrafı */
+#kayitlar-div p {
+  color: #2c2c2c;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+/* Fragmanlar bölümü */
+#fragmanlar {
+  margin: 60px 0;
+  background-color: rgba(244, 172, 50, 0.1);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+/* Fragmanlar başlığı */
+#fragmanlar h2 {
+  color: #522546;
+  font-size: 28px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #f4ac32;
+}
+
+/* Fragmanlar grid yapısı */
+.trailer-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Fragman kutusu */
+.trailer-item {
+  background-color: #f4ac32;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Fragman kutusu hover efekti */
+.trailer-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Fragman başlığı */
+.trailer-item h3 {
+  color: #522546;
+  font-size: 18px;
+  padding: 20px;
+  margin: 0;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* Video kutusu oran ayarı */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* Video iframe ayarı */
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Genel başlıklar */
+h3 {
+  font-family: Rubik, sans-serif;
+  font-size: 18px;
+  color: #522546;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+h2 {
+  font-family: "Noto Serif Georgian", serif;
+  font-size: 28px;
+  color: #522546;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #f4ac32;
+}
+
+/* İçerik linkleri */
+#content a {
+  font-family: "Noto Serif Georgian", serif;
+  font-size: 18px;
+  color: #522546;
+  text-decoration: none;
+}
+/*parola görünürlüğü*/
+#parola-goster{
+  margin-left: 5px;
+  border: none;
+  
+  
+  cursor: pointer;
+}
+/* Yukarı kaydırma butonu */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  font-size: 18px;
+  padding: 9px 15px; /* Buton boyutunu  */
+  border: solid #000 1px;
+  background-color: #fa812f;
+  
+  color: #522546;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Yukarı kaydırma butonu hover */
+#scrollTopBtn:hover {
+ background: linear-gradient(165deg, #ffb22c 0%, #fa812f 100%);
+  color: #522546;
+  transform: scale(1.1);
+}
+
+/* Kayıt ol formu kutusu */
+.form-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Kayıt ol formu */
+#uyeForm {
+  width: 100%;
+}
+
+/* Kayıt ol formu tablosu */
+#uyeForm table {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Kayıt ol formu giriş alanları */
+#uyeForm input[type="text"],
+#uyeForm input[type="email"],
+#uyeForm input[type="password"],
+#uyeForm input[type="date"],
+#uyeForm select {
+  width: 100%;
+  height: 38px;      
+  padding: 6px 12px; 
+  box-sizing: border-box;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+#uyeForm select {
+  height: 38px !important;
+  padding: 6px 12px !important;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #fff;
+}
+/* Kayıt ol formu focus efekti */
+#uyeForm input:focus,
+#uyeForm select:focus {
+  border-color: #522546;
+  outline: none;
+  box-shadow: 0 0 5px rgba(82, 37, 70, 0.2);
+}
+
+/* Kayıt ol formu etiketleri */
+#uyeForm label {
+  font-weight: 600;
+  color: #522546;
+}
+
+/* Kayıt ol formu başlığı */
+#uyeForm h2 {
+  color: #522546;
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #f4ac32;
+  padding-bottom: 0.5rem;
+}
+
+/* Kayıt ol formu gönder butonu */
+#uyeForm button[type="submit"] {
+  background-color: #522546;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Kayıt ol formu gönder butonu hover */
+#uyeForm button[type="submit"]:hover {
+  background-color: #f4ac32;
+}
+
+/* İçerik görselleri */
+#content img,
+.content-block img,
+.inline-container img {
+  border: #f4ac32 solid 3px;
+  border-radius: 3px;
+}
+
+/* Inline görseller için ek ayarlar */
+.inline-container img {
+  vertical-align: top;
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 300px;
+}
+
+/* Radyo ve checkbox grupları */
+.radio-group,
+.checkbox-group {
+  display: flex;  /* Flexbox kullanarak yan yana hizalama */
+  gap: 20px;
+  align-items: center;
+}
+
+/* Hesap bilgileri başlığı */
+#hesapBilgileri {
+  font-family: "Noto Serif Georgian", serif;
+  font-size: 18px;
+}
+
+/* Hesap bilgileri hover efekti */
+#hesapBilgileri:hover {
+  background-color: #fff;
+  color: #f4ac32;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo başlığı */
+.logo-container #logo h1 {
+  margin: 0;
+  color: black !important ;
+  font-family: "Ledger", sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  text-decoration: none;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Rastgele film seçici görseli */
+#random-movie-container img {
+  margin-bottom: 20px;
+}
+
+/* Rastgele film seçici butonu */
+#random-movie-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #f4ac32;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+/* Rastgele film seçici kutusu */
+#random-movie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* Rastgele film başlığı */
+#random-movie-title {
+  font-size: 20px;
+  color: #522546;
+  font-family: "Noto Serif Georgian", serif;
+}
+
+/* Rastgele film butonu hover */
+#random-movie-button:hover {
+  background-color: #522546;
+  color: #f4ac32;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Rastgele film butonu disabled */
+#random-movie-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f4ac32;
+  color: #2c2c2c;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
